@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="218b47c1-4153-4c97-bc69-733b2ef004ad">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     asignatura.`CNI_asignatura` AS asignatura_CNI_asignatura,
+     asignatura.`nombre_asignatura` AS asignatura_nombre_asignatura,
+     asignatura.`semestre` AS asignatura_semestre,
+     asignatura.`creditos` AS asignatura_creditos
+FROM
+     `asignatura` asignatura]]>
+	</queryString>
+	<field name="asignatura_CNI_asignatura" class="java.lang.Integer"/>
+	<field name="asignatura_nombre_asignatura" class="java.lang.String"/>
+	<field name="asignatura_semestre" class="java.lang.String"/>
+	<field name="asignatura_creditos" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="158" y="24" width="251" height="21" uuid="b17f221c-e596-4288-b1bf-75eb0d420bec"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ASIGNATURAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="2" width="100" height="20" uuid="d3d1f639-27ef-44fb-992f-607768dbd66b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNI Asignatura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="2" width="100" height="20" uuid="958e3c4a-7aa4-4cc8-8f61-aba344806e2a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="2" width="100" height="20" uuid="f50a6297-17a6-4dc8-af1b-be4f16aa4c9a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Semetre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="2" width="100" height="20" uuid="1fe60d53-d4a1-4823-a057-532fe2fdb198"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Créditos]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="8" width="100" height="20" uuid="a7ab8d1e-ca56-45fd-b0cf-23435fe6ffc2"/>
+				<textFieldExpression><![CDATA[$F{asignatura_CNI_asignatura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="13" width="100" height="20" uuid="8d0c64d4-bd81-4c40-b2a8-ec6b14dd3644"/>
+				<textFieldExpression><![CDATA[$F{asignatura_nombre_asignatura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="10" width="100" height="20" uuid="be9386f2-2656-4dc4-a214-8475491b84d8"/>
+				<textFieldExpression><![CDATA[$F{asignatura_semestre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="11" width="100" height="20" uuid="14c3d797-8a32-4e87-9be3-37aa8294c65e"/>
+				<textFieldExpression><![CDATA[$F{asignatura_creditos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

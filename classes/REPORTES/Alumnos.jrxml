@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e3a5c3e-8d2f-4359-b84e-34d280ed8c08">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     alumnos.`Matricula` AS alumnos_Matricula,
+     alumnos.`Nombre` AS alumnos_Nombre,
+     alumnos.`Apellidos` AS alumnos_Apellidos,
+     alumnos.`E_mail` AS alumnos_E_mail,
+     alumnos.`Semestre` AS alumnos_Semestre,
+     alumnos.`Edad` AS alumnos_Edad
+FROM
+     `alumnos` alumnos]]>
+	</queryString>
+	<field name="alumnos_Matricula" class="java.lang.String"/>
+	<field name="alumnos_Nombre" class="java.lang.String"/>
+	<field name="alumnos_Apellidos" class="java.lang.String"/>
+	<field name="alumnos_E_mail" class="java.lang.String"/>
+	<field name="alumnos_Semestre" class="java.lang.String"/>
+	<field name="alumnos_Edad" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="32" width="226" height="21" uuid="d6e079ce-d462-48fd-954a-3e5375eebf7d"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ALUMNOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="2" width="55" height="20" uuid="d651100e-854e-4841-a129-1917ef840f11"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Matricula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="0" width="100" height="20" uuid="b8892a49-2666-4422-a5df-8b3269b397cd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="2" width="75" height="20" uuid="804b9703-b979-477c-ab51-f2068960cde8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="2" width="100" height="20" uuid="2685f9e6-c21c-407c-b155-61adf0e5fde0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="2" width="53" height="20" uuid="cb0de2d9-a1d0-45e6-a7a0-94d3275b2c5e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Semestre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="2" width="47" height="20" uuid="c20ff2cc-0a0f-4180-8825-6e5bf2a55554"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="4" width="55" height="20" uuid="7707bb5b-065a-491b-b8fd-ba12083308e5"/>
+				<textFieldExpression><![CDATA[$F{alumnos_Matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="4" width="100" height="20" uuid="1d31261c-33ef-43ef-a4c0-229c21819704"/>
+				<textFieldExpression><![CDATA[$F{alumnos_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="4" width="100" height="20" uuid="c5e6377e-46f0-4310-bb58-7ba961e7a0c7"/>
+				<textFieldExpression><![CDATA[$F{alumnos_Apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="5" width="75" height="20" uuid="6c256578-c7d4-4318-ad91-aa078b5c76a3"/>
+				<textFieldExpression><![CDATA[$F{alumnos_E_mail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="6" width="53" height="20" uuid="df23f221-0de2-461b-8916-5e28469d1831"/>
+				<textFieldExpression><![CDATA[$F{alumnos_Semestre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="7" width="47" height="20" uuid="a3c55fff-d9a4-4325-b7d9-90c127cb0156"/>
+				<textFieldExpression><![CDATA[$F{alumnos_Edad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
